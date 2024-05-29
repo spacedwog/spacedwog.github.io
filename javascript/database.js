@@ -1,6 +1,6 @@
 const {
     createPool
-} = require('mysql');
+}
 const pool = createPool({
     host: "spacedwog.mysql.uhserver.com",
     user: "spacedwog",
@@ -15,3 +15,5 @@ pool.query('select * from projetos', (err, result, fields)=>{
     }
     alert(result);
 });
+
+module.exports = pool;
