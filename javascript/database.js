@@ -1,6 +1,6 @@
 const {
     createPool
-}
+} = req('mysql');
 const pool = createPool({
     host: "spacedwog.mysql.uhserver.com",
     user: "spacedwog",
