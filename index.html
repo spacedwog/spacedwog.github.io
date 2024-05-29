@@ -11,6 +11,25 @@
     <title>Spacedwog Portifólio</title>
   </head>
   <body>
+    <script>
+      const {
+        createPool
+      } = require('mysql');
+      const pool = createPool({
+            host: "spacedwog.mysql.uhserver.com",
+            user: "spacedwog",
+            password: "KIMERAbeta12@",
+            database: "spacedwog",
+            connectionLimit: 10
+      });
+      pool.query('select * from projetos', (err, result, fields)=>{
+          if(err){
+              alert(err);
+          }
+          alert(result);
+      });
+      module.exports = pool;      
+    </script>
     <nav id='menu'>
       <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
       <ul>
