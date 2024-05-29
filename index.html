@@ -12,16 +12,13 @@
   </head>
   <body>
     <script>
-      const {
-        createPool
-      } = require('mysql');
       const pool = createPool({
             host: "spacedwog.mysql.uhserver.com",
             user: "spacedwog",
             password: "KIMERAbeta12@",
             database: "spacedwog",
             connectionLimit: 10
-      });
+      }) = require('mysql');
       pool.query('select * from projetos', (err, result, fields)=>{
           if(err){
               alert(err);
