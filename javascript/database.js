@@ -11,7 +11,7 @@ const pool = createPool({
 
 pool.query('select * from projetos', (err, result, fields)=>{
     if(err){
-        return console.log(err);
+        alert(err);
     }
-    return console.log(result);
+    alert(result);
 });
