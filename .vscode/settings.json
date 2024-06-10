@@ -1,3 +1,18 @@
 {
-    "compile-hero.disable-compile-files-on-did-save-code": true
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "spacedwog.mysql.uhserver.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "spacedwog",
+            "database": "spacedwog",
+            "username": "spacedwog"
+        }
+    ]
 }
