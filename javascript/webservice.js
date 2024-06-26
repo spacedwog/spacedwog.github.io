@@ -4,4 +4,4 @@ function getItems() {
       .then(data => _displayItems(data))
       .catch(error => console.error('Unable to get items.', error));
       alert(data);
-}  
+}
