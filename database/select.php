@@ -10,4 +10,5 @@
 
     # Exibe os registros na tela 
     while ($row = mysqli_fetch_array( $result_query )) { print $row[id_projeto] . " -- " . $row[nome_projeto] . " -- " . $row[tipo_projeto]; }
+
 ?>
