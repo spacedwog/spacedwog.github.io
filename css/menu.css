@@ -55,7 +55,7 @@
 	content: "\2261"; 
 	margin-left: 20px;
 }
-#menu ul.sub-menus{
+#menu ul.sub-menus {
 	height: auto;
 	overflow: hidden;
 	width: 225px;
@@ -76,11 +76,11 @@
 #menu li:hover ul.sub-menus {
 	display: block
 }
-#menu ul.sub-menus a:hover{
+#menu ul.sub-menus a:hover {
 	background: #F2F2F2;
 	color: #444444;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
 	#menu {position:relative}
 	#menu ul {background:#444444;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
 	#menu ul.sub-menus {width:100%;position:static;}
