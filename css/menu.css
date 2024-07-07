@@ -33,7 +33,7 @@
 	color: #0099CC;
 	background: #F2F2F2;
 }
-#menu input {
+#menu input a {
 	display: none;
 	margin: 0;
 	padding: 0;
