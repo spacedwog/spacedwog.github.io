@@ -18,6 +18,7 @@
 	position: relative;
 }
 #menu a {
+	display: block;
 	line-height: 45px;
 	padding: 0 14px;
 	text-decoration: none;
