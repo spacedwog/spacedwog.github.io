@@ -15,24 +15,36 @@
         <script src="./javascript/babel.js"></script>
     </head>
 <body class="w3-light-grey">
-    
-
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:30%">
-    <a href="#" class="w3-bar-item w3-button">Link 1</a> 
-    <a href="#" class="w3-bar-item w3-button">Link 2</a> 
-    <div class="w3-dropdown-hover">
-      <button class="w3-button">Dropdown
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="w3-dropdown-content w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button">Link</a>
-        <a href="#" class="w3-bar-item w3-button">Link</a>
-      </div>
-    </div> 
-    <a href="#" class="w3-bar-item w3-button">Link 3</a> 
-  </div>
+    <nav id='menu'>
+      <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+      <ul>
+        <li><a href='https://spacedwog.com.br'>Home</a></li>
+        <li><a class='dropdown-arrow'>Produtos</a>
+          <ul class='sub-menus'>
+            <li><a href='https://loja.infinitepay.io/spacedwog/ist1936-plano-de-desenvolvimento-de-aplicativos-mo'>Desenvolvimento Mobile</a></li>
+            <li><a href='https://loja.infinitepay.io/spacedwog/uty6194-plano-de-desenvolvimento-de-aplicativos-we'>Desenvolvimento WebApp</a></li>
+            <li><a href='https://loja.infinitepay.io/spacedwog/ghp6758-plano-de-desenvolvimento-de-aplicativos'>Desenvolvimento App</a></li>
+          </ul>
+        </li>
+        <li><a class='dropdown-arrow'>Serviços</a>
+          <ul class='sub-menus'>
+            <li><a href='https://loja.infinitepay.io/spacedwog/yuy9511-manutencao-de-app'>Manutenção de App</a></li>
+            <li><a href='https://loja.infinitepay.io/spacedwog/oam6307-manutencao-de-website'>Manutenção de Website</a></li>
+          </ul>
+        </li>
+        <li><a class='dropdown-arrow'>Template</a>
+          <ul class='sub-menus'>
+            <li><a href='template/empresarial/template_empresarial.html'>Template Empresarial</a></li>
+            <li><a href='template/profissional/template_profissional.html'>Template Profissional</a></li>
+            <li>
+              <a href='template/influencer/template_influencer.html'>Template Influencer</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px; left: 130%;">
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
