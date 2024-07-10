@@ -1,7 +1,11 @@
 function load_template(template){
-    if(template = 'cafe'){
-        window.open('https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cafe');
+    let src;
+    switch(template){
+        case 'cafe':
+            src = 'https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_cafe';
+        break;
     }
+    window.open(src);
 }
 
 const canvas = document.getElementById("myCanvas");
