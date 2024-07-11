@@ -50,6 +50,11 @@
     text-align: center;
     color: white;
   }
+
+  #layout_panel{
+    width: auto;
+    height: auto;
+  }
   
   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
   @media (max-width: 600px) {
