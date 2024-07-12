@@ -88,9 +88,9 @@ function social_media(social_media){
   window.open(src);
 }
 
-function projeto(element) {
+function projeto(nome_projeto) {
   let src;
-  switch(element){
+  switch(nome_projeto){
     case 'donna_paris':
       src = 'https://donnaparis.spacedwog.com.br/';
       break;
