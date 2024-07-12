@@ -144,7 +144,8 @@ function send_email(){
 
   let mailto =  'mailto:owner@spacedwog.com.br?subject' + subject +
                 '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto ' + message;
-  window.open(mailto);
+                
+  window.location.href = mailto;
 }
 
 // Close the sidebar with the close button
