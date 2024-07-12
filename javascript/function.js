@@ -121,7 +121,7 @@ function efetuar_compra(compra){
 }
 
 function chat_painel(){
-  alert('Conectando ao chat!');
+  alert("Conectando ao chat!");
 }
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
