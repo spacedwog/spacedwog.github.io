@@ -121,7 +121,7 @@ function efetuar_compra(compra){
 }
 
 function chat_painel(){
-  window.open("https://wa.me/<+55(11)99171-9629)>");
+  window.open("https://wa.me/5511991719629");
 }
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
