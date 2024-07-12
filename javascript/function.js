@@ -136,6 +136,14 @@ function w3_open() {
   }
 }
 
+function send_email(){
+  let name = document.getElementById('name').value;
+
+  alert(name);
+
+  //window.open();
+}
+
 // Close the sidebar with the close button
 function w3_close() {
   mySidebar.style.display = "none";
