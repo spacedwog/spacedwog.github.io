@@ -120,6 +120,10 @@ function efetuar_compra(compra){
   window.open(src);
 }
 
+function chat_painel(){
+  alert('Conectando ao chat!');
+}
+
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 
