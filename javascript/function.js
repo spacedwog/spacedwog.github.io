@@ -12,6 +12,7 @@ function change_article(article){
   let src;
 
   switch(article){
+    
     case 'gourmet_catering':
       src = 'https://www.w3schools.com/w3images/hamburger.jpg';
     break;
@@ -60,6 +61,7 @@ function change_article(article){
       src = 'https://www.w3schools.com/w3images/house1.jpg';
     break;
   }
+
   const img_article = document.getElementById('article_image');
   img_article.src = src;
 }
