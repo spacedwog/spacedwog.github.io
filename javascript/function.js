@@ -105,7 +105,6 @@ function projeto(nome_projeto) {
 function efetuar_compra(compra){
   let src;
   switch(compra){
-
     case 'app':
       src = 'https://loja.infinitepay.io/spacedwog/ghp6758-plano-de-desenvolvimento-de-aplicativos';
       break;
