@@ -102,6 +102,25 @@ function projeto(nome_projeto) {
   window.open(src);
 }
 
+function efetuar_compra(compra){
+  let src;
+  switch(compra){
+
+    case 'app':
+      src = 'https://loja.infinitepay.io/spacedwog/ghp6758-plano-de-desenvolvimento-de-aplicativos';
+      break;
+
+    case 'mobile':
+      src = 'https://loja.infinitepay.io/spacedwog/uty6194-plano-de-desenvolvimento-de-aplicativos-mo';
+      break;
+
+    case 'webapp':
+      src = 'https://loja.infinitepay.io/spacedwog/uty6194-plano-de-desenvolvimento-de-aplicativos-we';
+      break;
+  }
+  window.open(src);
+}
+
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
 
