@@ -76,7 +76,7 @@ function social_media(social_media){
     break;
 
     case 'twitter':
-      src = 'https://x.com/spacedwog';
+      src = 'https://x.com/spacedwog/';
     break;
 
     case 'linkedin':
