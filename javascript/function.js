@@ -88,7 +88,7 @@ function social_media(social_media){
   window.open(src);
 }
 
-function onClick(element) {
+function projeto(element) {
   let src;
   switch(element){
     case 'donna_paris':
