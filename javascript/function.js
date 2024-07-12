@@ -138,10 +138,15 @@ function w3_open() {
 
 function send_email(){
   let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let subject = document.getElementById('subject').value;
+  let message = document.getElementById('message').value;
 
   alert(name);
 
-  //window.open();
+  let mailto =  'mailto:owner@spacedwog.com.br?subject' + subject +
+                '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto ' + message;
+  window.open(mailto);
 }
 
 // Close the sidebar with the close button
