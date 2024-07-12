@@ -110,7 +110,7 @@ function efetuar_compra(compra){
       break;
 
     case 'mobile':
-      src = 'https://loja.infinitepay.io/spacedwog/uty6194-plano-de-desenvolvimento-de-aplicativos-mo';
+      src = 'https://loja.infinitepay.io/spacedwog/ist1936-plano-de-desenvolvimento-de-aplicativos-mo';
       break;
 
     case 'webapp':
