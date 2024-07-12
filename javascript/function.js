@@ -142,8 +142,6 @@ function send_email(){
   let subject = document.getElementById('subject').value;
   let message = document.getElementById('message').value;
 
-  alert(name);
-
   let mailto =  'mailto:owner@spacedwog.com.br?subject' + subject +
                 '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto ' + message;
   window.open(mailto);
