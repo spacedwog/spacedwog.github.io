@@ -69,7 +69,7 @@ function chat_painel(){
 var mySidebar = document.getElementById("mySidebar");
 
 function w3_open() {
-  if (mySidebar.style.display === 'block') {
+  if (mySidebar.style.display == 'block') {
     mySidebar.style.display = 'block';
   }
   else {
