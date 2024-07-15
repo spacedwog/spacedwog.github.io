@@ -6,7 +6,6 @@ function getItems() {
 }
 
 function tipo_botao(botao){
-  alert(botao);
   
   // Check browser support
   if(typeof(Storage) !== "undefined"){
