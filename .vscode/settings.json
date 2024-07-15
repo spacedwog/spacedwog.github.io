@@ -14,5 +14,8 @@
             "database": "spacedwog",
             "username": "spacedwog"
         }
-    ]
+    ],
+    "files.readonlyInclude": {
+        "{**/.c4z/.extsrcs/*.PROTSYM.cbl,**/.c4z/.extsrcs/*.PROTSYM.listing}": true
+    }
 }
