@@ -11,6 +11,7 @@ function tipo_botao(botao){
   if(typeof(Storage) !== "undefined"){
     // Store
     localStorage.setItem("botao_clicado", botao);
+    gerar_relatorio();
   }
 }
 
