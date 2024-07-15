@@ -7,7 +7,6 @@
       <link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/ac4f6dca/site_favicon_16_1715370263429.ico">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="./javascript/function.js"></script>
-      <script src="./javascript/webservice.js"></script>
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,7 +50,7 @@
         <span class="w3-jumbo w3-hide-small">Spacedwog - Projetos Inovadores</span><br>
         <span class="w3-xxlarge w3-hide-large w3-hide-medium">Projetando seu futuro.</span><br>
         <span class="w3-large">Sua procura terminou, faça seu projeto conosco.</span>
-        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" onclick="tipo_botao('about')">Saiba mais sobre Spacedwog</a></p>
+        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Saiba mais sobre Spacedwog</a></p>
       </div>
       <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
         <i class="fa fa-instagram w3-hover-opacity" onclick="social_media('instagram')" onclick="tipo_botao('instagram')"></i>
@@ -151,7 +150,7 @@
           <img src="./imagem/Loja_Virtual.png" style="width:100%" onclick="projeto('donna_paris')" onclick="tipo_botao('donna_paris')" class="w3-hover-opacity" alt="A phone">
         </div>
         <div class="w3-col l3 m6">
-          <img src="./imagem/Criando_Sua_Raposa.png" style="width:100%" onclick="projeto('criando_sua_raposa')" onclick="tipo_botao('criando_sua_raposa')" class="w3-hover-opacity" alt="A drone">
+          <img src="./imagem/Criando_Sua_Raposa.png" style="width:100%" onclick="projeto('criando_sua_raposa')" onclick="tipo_botao('instagram')" class="w3-hover-opacity" alt="A drone">
         </div>
       </div>
     </div>
@@ -211,7 +210,7 @@
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large" type="submit" onclick="efetuar_compra('app')" onclick="tipo_botao('app')">Sign Up</button>
+          <button class="w3-button w3-black w3-padding-large" type="submit" onclick="efetuar_compra('app')">Sign Up</button>
         </li>
       </ul>
     </div>
@@ -227,7 +226,7 @@
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large" type="submit" onclick="efetuar_compra('webapp')" onclick="tipo_botao('webapp')">Sign Up</button>
+          <button class="w3-button w3-black w3-padding-large" type="submit" onclick="efetuar_compra('webapp')">Sign Up</button>
         </li>
       </ul>
     </div>
@@ -243,7 +242,7 @@
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large" type="submit" onclick="efetuar_compra('mobile')" onclick="tipo_botao('mobile')">Sign Up</button>
+          <button class="w3-button w3-black w3-padding-large" type="submit" onclick="efetuar_compra('mobile')">Sign Up</button>
         </li>
       </ul>
     </div>
@@ -264,7 +263,7 @@
       <p><input id="subject" class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input id="message" class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-black" type="submit" onclick="send_email()" onclick="tipo_botao('mensagem')">
+        <button class="w3-button w3-black" type="submit" onclick="send_email()">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
@@ -276,12 +275,12 @@
 
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64">
-      <a href="#home" class="w3-button w3-light-grey" onclick="tipo_botao('home')"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
       <div class="w3-xlarge w3-section">
-        <i class="fa fa-instagram w3-hover-opacity" onclick="social_media('instagram')" onclick="tipo_botao('instagram')"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity" onclick="social_media('pinterest')" onclick="tipo_botao('pinterest')"></i>
-        <i class="fa fa-twitter w3-hover-opacity" onclick="social_media('twitter')" onclick="tipo_botao('twitter')"></i>
-        <i class="fa fa-linkedin w3-hover-opacity" onclick="social_media('linkedin')" onclick="tipo_botao('linkedin')"></i>
+        <i class="fa fa-instagram w3-hover-opacity" onclick="social_media('instagram')"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity" onclick="social_media('pinterest')"></i>
+        <i class="fa fa-twitter w3-hover-opacity" onclick="social_media('twitter')"></i>
+        <i class="fa fa-linkedin w3-hover-opacity" onclick="social_media('linkedin')"></i>
       </div>
       <p>Powered by <a href="https://uolhost.uol.com.br/" title="W3.CSS" target="_blank" class="w3-hover-text-green">uolhost</a></p>
     </footer>
