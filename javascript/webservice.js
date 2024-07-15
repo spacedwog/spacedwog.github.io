@@ -14,3 +14,7 @@ function tipo_botao(botao){
     localStorage.setItem("botao_clicado", botao);
   }
 }
+
+function gerar_relatorio(){
+  
+}
