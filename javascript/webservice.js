@@ -15,5 +15,10 @@ function tipo_botao(botao){
 }
 
 function gerar_relatorio(){
-  
+  // Check browser support
+  if(typeof(Storage) !== "undefined"){
+    // Retrieve
+    document.getElementById("relatorio").innerHTML = "<p>Botão Clicado " + localStorage.getItem("botao_clicado") + "</p>";
+    localStorage.setItem("botao_clicado", botao);
+  }
 }
