@@ -86,7 +86,9 @@ function send_email() {
     let mailto = 'mailto:owner@spacedwog.com.br?subject=' + subject +
         '&body=Nome: ' + name + '<br>Email: ' + email + '<br>Solicitou o projeto ' + message;
 
-    window.location.href = mailto;
+    if (email != "") {
+        window.location.href = mailto;
+    }
 }
 
 // Close the sidebar with the close button
