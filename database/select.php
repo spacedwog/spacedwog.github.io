@@ -2,7 +2,7 @@
     include_once "conexao.php";
 
     # Seleciona o banco de dados
-    mysqli_select_db( $database ) or die( 'Erro na seleção do banco' );
+    mysqli_select_db( $conn ) or die( 'Erro na seleção do banco' );
 
     # Executa a query desejada
     $query = "SELECT id_projeto, nome_projeto, tipo_projeto FROM projetos";
