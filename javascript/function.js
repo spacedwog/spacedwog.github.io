@@ -84,7 +84,7 @@ function send_email() {
     let message = document.getElementById('message').value;
 
     let mailto = 'mailto:owner@spacedwog.com.br?subject=' + subject +
-        '&body=Nome: ' + name + '<br\>Email: ' + email + '<br\>Solicitou o projeto: ' + message;
+        '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
 
     if (email != "") {
         window.location.href = mailto;
