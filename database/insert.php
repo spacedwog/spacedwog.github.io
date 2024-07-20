@@ -1,5 +1,16 @@
 <?php
-    include_once "conexao.php";
+    //include_once "conexao.php";
+    $servername = "spacedwog.mysql.uhserver.com";
+    $username = "spacedwog";
+    $password = "6z2h1j3k9F!";
+    $dbname = "spacedwog";
+    
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
 
     $name = filter_input(INPUT_POST, 'name');
     $email = filter_input(INPUT_POST, 'email');
