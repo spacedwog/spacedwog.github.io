@@ -1,5 +1,4 @@
 function getItems() {
-    alert("teste");
     fetch('./database/select.php')
         .then(response => response.json())
         .then(data => _displayItems(data))
