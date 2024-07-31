@@ -1,31 +1,42 @@
 function getLocation() {
-    const x = document.getElementById("laplace_demon");
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+        setError("Geolocation is not supported by this browser.");
     }
 }
 
 function showPosition(position) {
-    const x = document.getElementById("laplace_demon");
-    x.innerHTML = "<area shape='default' coords='" + position.coords.latitude +
-        "," + position.coords.longitude + "'>";
+    setLocation(position.coords.latitude, position.coords.longitude);
 }
 
 function showError(error) {
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
+            console.error("User denied the request for Geolocation.");
             break;
         case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
+            console.error("Location information is unavailable.");
             break;
         case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
+            console.error("The request to get user location timed out.");
             break;
         case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
+            console.error("An unknown error occurred.");
             break;
     }
+}
+
+function setLocation(latitude, longitude) {
+    localStorage.setItem("latitude", latitude);
+    localStorage.setItem("longitude", longitude);
+}
+
+function getLocation() {
+    latitude = localStorage.getItem("latitude");
+    longitude = localStorage.getItem("longitude");
+}
+
+function setError(error) {
+    console.error(error);
 }
