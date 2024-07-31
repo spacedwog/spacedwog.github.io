@@ -9,10 +9,8 @@ function getLocation() {
 
 function showPosition(position) {
     const x = document.getElementById("laplace_demon");
-    x.innerHTML = "<area shape='default' coords='" + position.coords.latitude + "," +
-        position.coords.longitude + "'>";
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //    "<br>Longitude: " + position.coords.longitude;
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
 }
 
 function showError(error) {
