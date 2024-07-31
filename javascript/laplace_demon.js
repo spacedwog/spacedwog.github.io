@@ -32,11 +32,6 @@ function setLocation(latitude, longitude) {
     localStorage.setItem("longitude", longitude);
 }
 
-function getLocation() {
-    latitude = localStorage.getItem("latitude");
-    longitude = localStorage.getItem("longitude");
-}
-
 function setError(error) {
     console.error(error);
 }
