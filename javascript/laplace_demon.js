@@ -14,7 +14,6 @@ function showPosition(position) {
 }
 
 function showError(error) {
-    const x = document.getElementById("laplace_demon");
     switch (error.code) {
         case error.PERMISSION_DENIED:
             x.innerHTML = "User denied the request for Geolocation."
