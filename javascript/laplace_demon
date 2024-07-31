@@ -1,4 +1,4 @@
-const x = document.getElementById("demo");
+const x = document.getElementById("laplace_demon");
 
 function getLocation() {
     if (navigator.geolocation) {
