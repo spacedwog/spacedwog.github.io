@@ -1,6 +1,5 @@
-const x = document.getElementById("laplace_demon");
-
 function getLocation() {
+    const x = document.getElementById("laplace_demon");
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
@@ -9,11 +8,13 @@ function getLocation() {
 }
 
 function showPosition(position) {
+    const x = document.getElementById("laplace_demon");
     x.innerHTML = "Latitude: " + position.coords.latitude +
         "<br>Longitude: " + position.coords.longitude;
 }
 
 function showError(error) {
+    const x = document.getElementById("laplace_demon");
     switch (error.code) {
         case error.PERMISSION_DENIED:
             x.innerHTML = "User denied the request for Geolocation."
