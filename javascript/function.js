@@ -72,12 +72,8 @@ function w3_open() {
 
     if (mySidebar.style.display == 'block') {
         mySidebar.style.display = 'none';
-        alert('getLocation()');
-        getLocation();
     } else {
         mySidebar.style.display = 'block';
-        alert('getLocation()');
-        getLocation();
     }
 }
 
@@ -113,5 +109,4 @@ function getLocation() {
 function showPosition(position) {
     var latitude = localStorage.setItem("latitude", position.coords.latitude);
     var longitude = localStorage.setItem("longitude", position.coords.longitude);
-    alert("Latitude: " + latitude + "\nLongitude: " + longitude);
 }
