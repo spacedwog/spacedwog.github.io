@@ -72,10 +72,10 @@ function w3_open() {
 
     if (mySidebar.style.display == 'block') {
         mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
         alert('getLocation()');
         getLocation();
+    } else {
+        mySidebar.style.display = 'block';
     }
 }
 
