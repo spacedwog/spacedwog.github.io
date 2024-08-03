@@ -15,6 +15,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    localStorage.setItem("latitude", position.coords.latitude);
-    localStorage.setItem("longitude", position.coords.longitude);
+    var latitude = localStorage.setItem("latitude", position.coords.latitude);
+    var longitude = localStorage.setItem("longitude", position.coords.longitude);
+    alert("Latitude: " + latitude + "\nLongitude: " + longitude);
 }
