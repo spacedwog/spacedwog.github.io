@@ -1,7 +1,9 @@
 function laplace_demon() {
-    var webservice = localStorage.getItem("webservice");
+    var mySidebar = document.getElementById("mySidebar");
+    var display = mySidebar.style.display;
 
-    if (webservice = 'on') {
+    if (display == 'block') {
+        alert('getLocation()');
         getLocation();
     }
 }
