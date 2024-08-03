@@ -74,6 +74,8 @@ function w3_open() {
         mySidebar.style.display = 'none';
     } else {
         mySidebar.style.display = 'block';
+        alert('getLocation()');
+        getLocation();
     }
 }
 
@@ -96,4 +98,18 @@ function w3_close() {
     // Toggle between showing and hiding the sidebar when clicking the menu icon
     var mySidebar = document.getElementById("mySidebar");
     mySidebar.style.display = "none";
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latitude = localStorage.setItem("latitude", position.coords.latitude);
+    var longitude = localStorage.setItem("longitude", position.coords.longitude);
+    alert("Latitude: " + latitude + "\nLongitude: " + longitude);
 }
