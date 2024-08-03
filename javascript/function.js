@@ -76,6 +76,8 @@ function w3_open() {
         getLocation();
     } else {
         mySidebar.style.display = 'block';
+        alert('getLocation()');
+        getLocation();
     }
 }
 
