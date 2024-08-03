@@ -72,10 +72,8 @@ function w3_open() {
 
     if (mySidebar.style.display == 'block') {
         mySidebar.style.display = 'none';
-        localStorage.setItem("webservice", 'off');
     } else {
         mySidebar.style.display = 'block';
-        localStorage.setItem("webservice", 'on');
     }
 }
 
