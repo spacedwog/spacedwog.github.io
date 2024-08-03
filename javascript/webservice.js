@@ -1,6 +1,9 @@
-function getItems() {
-    fetch('./database/select.php')
-        .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
+function getProjects() {
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "select.php?q=" + str);
+    xhttp.send();
 }

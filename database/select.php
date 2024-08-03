@@ -16,14 +16,27 @@
         mysqli_select_db( $conn ) or die( 'Erro na seleção do banco' );
     
         # Executa a query desejada
-        $query = "SELECT id_projeto, nome_projeto, tipo_projeto FROM projetos";
+        $query = "SELECT id_projeto, nome_projeto, tipo_projeto FROM projetos WHERE id_projeto = ?";
         $result_query = mysqli_query( $query ) or die(' Erro na query:' . $query . ' ' . mysqli_error() );
-    
-        # Exibe os registros na tela
-        while ($row = mysqli_fetch_array( $result_query )) {
-            print $row[id_projeto] . " -- " . $row[nome_projeto] . " -- " . $row[tipo_projeto];
-            $data = JSON.parse($row);
-        }
+
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("s", $_GET['q']);
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->bind_result($id_projeto, $nome_projeto, $tipo_projeto);
+        $stmt->fetch();
+        $stmt->close();
+        
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>ID do Projeto</th>";
+        echo "<td>" . $id_projeto . "</td>";
+        echo "<th>Nome do Projeto</th>";
+        echo "<td>" . $nome_projeto . "</td>";
+        echo "<th>Tipo do Projeto</th>";
+        echo "<td>" . $tipo_projeto . "</td>";
+        echo "</tr>";
+        echo "</table>";
     }
     mysqli_close($conn);
 ?>
