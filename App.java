@@ -1,5 +1,4 @@
 
-Result Size: 668 x 444
 import java.io.File; 
 import java.io.IOException;
 
