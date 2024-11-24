@@ -4,7 +4,7 @@
     background: none repeat scroll 0% 0% rgb(241, 241, 241);
     border: 1px solid rgb(229, 229, 229);
     width: 300px;
-    align: center;
+    box-align: center;
 }
 
 .login-box div {
@@ -26,7 +26,7 @@
     font-weight: bold;
     margin: 0px 0px 0.5em;
     display: block;
-    -moz-user-select: none;
+    user-select: none;
 }
 
 .login-box label.remember {
@@ -63,7 +63,7 @@ input[type="password"] {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     border-image: none;
-    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     border-radius: 1px 1px 1px 1px;
 }
 
@@ -119,7 +119,7 @@ input.button[type="submit"] {
     transition: all 0.218s ease 0s;
     border: 1px solid rgb(220, 220, 220);
     background-color: #478BF9;
-    -moz-user-select: none;
+    user-select: none;
     cursor: default;
 }
 
@@ -133,7 +133,7 @@ input.button[type="submit"] {
 
 .login-box h2 strong {
     display: inline-block;
-    float: right;
+    fill-opacity: right;
     height: 19px;
     width: 52px;
     background: url("google.png") no-repeat scroll 0% 0% transparent;
