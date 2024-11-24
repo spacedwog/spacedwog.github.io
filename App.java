@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) {
         try {
             File myObj = new File("filename.txt");
-            if (myObj.createNewFile()) {  
+            if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             }
             else {
