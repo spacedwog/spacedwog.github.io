@@ -128,7 +128,7 @@ input.button[type="submit"] {
     color: rgb(102, 102, 102);
     line-height: 0;
     padding: 0px 0px 0px 0.4em;
-    -moz-user-select: none;
+    user-select: none;
 }
 
 .login-box h2 strong {
