@@ -76,7 +76,6 @@ function social_media(social_media) {
             break;
     }
     localStorage.setItem("rede_social", src);
-    setCookieNetwork("network", social_media);
     window.open(src);
 }
 
@@ -93,7 +92,6 @@ function projeto(nome_projeto) {
             break;
     }
     localStorage.setItem("projeto", nome_projeto);
-    setCookieProject("requestproject", nome_projeto);
     window.open(src);
 }
 
@@ -114,14 +112,12 @@ function efetuar_compra(compra) {
             break;
     }
     localStorage.setItem("produto", src);
-    setCookieProduct("buyingproduct", compra);
     window.open(src);
 }
 
 //Painel para Chat
 function chat_painel() {
     localStorage.setItem("chat", "https://wa.me/5511991719629");
-    setCookieChat("talkchat", "https://wa.me/5511991719629");
     window.open("https://wa.me/5511991719629");
 }
 
@@ -163,8 +159,7 @@ function send_email() {
 function setUsuario(nome, email){
     localStorage.setItem("nome_usuario", nome);
     localStorage.setItem("email_usuario", email);
-    setCookieName("username", nome);
-    setCookieEmail("useremail", email);
+    setCookie("username", nome);
 }
     //GET
 function getNome(){
