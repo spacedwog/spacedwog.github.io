@@ -19,6 +19,7 @@
         "{**/.c4z/.extsrcs/*.PROTSYM.cbl,**/.c4z/.extsrcs/*.PROTSYM.listing}": true
     },
     "cSpell.words": [
+        "abre",
         "Abrir",
         "ambiente",
         "ambientes",
@@ -28,7 +29,9 @@
         "cemail",
         "Concluídos",
         "Controlamos",
+        "cproduct",
         "cproduto",
+        "cproject",
         "cprojeto",
         "crede",
         "demanda",
@@ -47,6 +50,7 @@
         "Informações",
         "localização",
         "Metodologia",
+        "navega",
         "Objetos",
         "Orientação",
         "Orientado",
@@ -58,13 +62,18 @@
         "Projetando",
         "projeto",
         "Projetos",
+        "Receber",
         "Responsivo",
         "Sociais",
+        "solicita",
         "Spacedwog",
         "trabalhos",
         "uolhost",
         "updatemenu",
+        "useremail",
+        "userproduct",
         "usuario",
+        "Usuário",
         "Webservice"
     ]
 }

@@ -1,26 +1,39 @@
-class usuario{
-    constructor(nome, email, produto, projeto, chat, rede_social){
-        this.nome = nome;
-        this.email = email;
-        this.produto = produto;
-        this.projeto = projeto;
-        this.chat = chat;
-        this.rede_social = rede_social;
-    }
-}
-
-const novoUsuario = new usuario(getNome(), getEmail(), getProduto(),
-                                getProjeto(), getChat(), getRede_social());
-
 //Cookies
-    //Enviar para Cookies
-function setCookie(cname, cemail, cproduto, cprojeto, cchat, crede_social) {
-    document.cookie = cname + "=" + cemail + ";" + cproduto + ";path=/";
+    //Enviar para cookies
+        //Nome Do Usuário
+function setCookieName(cname, cvalue){
+    document.cookie = cname + "=" + cvalue + ";";
 }
-
-function getCookie(cname){
+function setCookieName(cemail, cvalue){
+    document.cookie = cemail + "=" + cvalue + ";";
+}
+function setCookieName(cproduct, cvalue){
+    document.cookie = cproduct + "=" + cvalue + ";";
+}
+function setCookieName(cproject, cvalue){    
+    document.cookie = cproject + "=" + cvalue + ";";
+}
+function setCookieName(cchat, cvalue){
+    document.cookie = cchat + "=" + cvalue + ";";    
+}
+function setCookieName(crede_social, cvalue){
+    document.cookie = crede_social + "=" + cvalue + ";";
+}
+    //Receber de Cookie
+function getCookies(cname, cemail, cproduct, cproject, cchat, crede_social){
     let name = cname + "=";
-    let ca = document.cookie.split(';');
+    let email = cemail + "=";
+    let product = cproduct + "=";
+    let project = cproject + "=";
+    let chat = cchat + "=";
+    let rede_social = crede_social + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    let ce = decodedCookie.split(';');
+    let cp = decodedCookie.split(';');
+    let ct = decodedCookie.split(';');
+    let cc = decodedCookie.split(';');
+    let cr = decodedCookie.split(';');
     for(let i = 0; i < ca.length; i++) {
       let c = ca[i];
       while (c.charAt(0) == ' ') {
@@ -30,21 +43,65 @@ function getCookie(cname){
         return c.substring(name.length, c.length);
       }
     }
+    for(let i = 0; i < ce.length; i++) {
+      let c = ce[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(email) == 0) {
+        return c.substring(email.length, c.length);
+      }
+    }
+    for(let i = 0; i < cp.length; i++) {
+      let c = cp[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(product) == 0) {
+        return c.substring(product.length, c.length);
+      }
+    }
+    for(let i = 0; i < ct.length; i++) {
+      let c = ct[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(project) == 0) {
+        return c.substring(project.length, c.length);
+      }
+    }
+    for(let i = 0; i < cc.length; i++) {
+      let c = cc[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(chat) == 0) {
+        return c.substring(chat.length, c.length);
+      }
+    }
+    for(let i = 0; i < cr.length; i++) {
+      let c = cr[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(rede_social) == 0) {
+        return c.substring(rede_social.length, c.length);
+      }
+    }
     return "";
 }
 
 function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("username", user, 365);
+    let user = getCookie("username");
+    let email = getCookie("username");
+    let product = getCookie("username");
+    let project = getCookie("username");
+    let chat = getCookie("username");
+    let rede_social = getCookie("username");
+    if (user != "") {
+      alert("Welcome again " + user);
     }
   }
-}
-
 //Webservice
     //Atualizar Menu                                
 function updatemenu() {
