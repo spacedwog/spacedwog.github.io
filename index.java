@@ -9,7 +9,7 @@ public class index {
         try (Scanner myReader = new Scanner(myObj)) {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                System.out.println(data);
+                System.out.println("Dados: " + data);
             } }
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred: " + e);
