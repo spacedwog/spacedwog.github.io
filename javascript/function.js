@@ -151,6 +151,7 @@ function social_media(social_media) {
             break;
     }
     localStorage.setItem("rede_social", src);
+    setCookieNetwork("network", social_media);
     window.open(src);
 }
 
@@ -195,6 +196,7 @@ function efetuar_compra(compra) {
 //Painel para Chat
 function chat_painel() {
     localStorage.setItem("chat", "https://wa.me/5511991719629");
+    setCookieChat("talkchat", "https://wa.me/5511991719629");
     window.open("https://wa.me/5511991719629");
 }
 
@@ -216,18 +218,19 @@ function showPosition(position) {
     //Enviar Informações
         //Enviar Email
 function send_email() {
-let name = document.getElementById('name').value;
-let email = document.getElementById('email').value;
-let subject = document.getElementById('subject').value;
-let message = document.getElementById('message').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let subject = document.getElementById('subject').value;
+    let message = document.getElementById('message').value;
 
-let mailto = 'mailto:owner@spacedwog.com.br?subject=' + subject +
-    '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
+    let mailto = 'mailto:owner@spacedwog.com.br?subject=' + subject +
+        '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
+    
+    setUsuario(name, email);
 
-if (email != "") {
-    window.location.href = mailto;
-}
-setUsuario(name, email);
+    if (email != "") {
+        window.location.href = mailto;
+    }
 }
 
 //Encapsulamento
@@ -235,6 +238,8 @@ setUsuario(name, email);
 function setUsuario(nome, email){
     localStorage.setItem("nome_usuario", nome);
     localStorage.setItem("email_usuario", email);
+    setCookieName("username", nome);
+    setCookieEmail("useremail", email);
 }
     //GET
 function getNome(){
