@@ -4,19 +4,19 @@
 function setCookieName(cname, cvalue){
     document.cookie = cname + "=" + cvalue + ";";
 }
-function setCookieName(cemail, cvalue){
+function setCookieEmail(cemail, cvalue){
     document.cookie = cemail + "=" + cvalue + ";";
 }
-function setCookieName(cproduct, cvalue){
+function setCookieProduct(cproduct, cvalue){
     document.cookie = cproduct + "=" + cvalue + ";";
 }
-function setCookieName(cproject, cvalue){    
+function setCookieProject(cproject, cvalue){    
     document.cookie = cproject + "=" + cvalue + ";";
 }
-function setCookieName(cchat, cvalue){
+function setCookieChat(cchat, cvalue){
     document.cookie = cchat + "=" + cvalue + ";";    
 }
-function setCookieName(crede_social, cvalue){
+function setCookieNetwork(crede_social, cvalue){
     document.cookie = crede_social + "=" + cvalue + ";";
 }
     //Receber de Cookie
@@ -92,12 +92,12 @@ function getCookies(cname, cemail, cproduct, cproject, cchat, crede_social){
 }
 
 function checkCookie() {
-    let user = getCookie("username");
-    let email = getCookie("username");
-    let product = getCookie("username");
-    let project = getCookie("username");
-    let chat = getCookie("username");
-    let rede_social = getCookie("username");
+    let user = getCookies("username");
+    let email = getCookies("useremail");
+    let product = getCookies("buyingproduct");
+    let project = getCookies("requestproject");
+    let chat = getCookies("talkchat");
+    let rede_social = getCookies("network");
     if (user != "") {
       alert("Welcome again " + user);
     }
@@ -166,7 +166,8 @@ function projeto(nome_projeto) {
             src = 'https://spacedwog.itch.io/criando-sua-raposa';
             break;
     }
-    localStorage.setItem("projeto", src);
+    localStorage.setItem("projeto", nome_projeto);
+    setCookieProject("requestproject", nome_projeto);
     window.open(src);
 }
 
@@ -187,6 +188,7 @@ function efetuar_compra(compra) {
             break;
     }
     localStorage.setItem("produto", src);
+    setCookieProduct("buyingproduct", compra);
     window.open(src);
 }
 
