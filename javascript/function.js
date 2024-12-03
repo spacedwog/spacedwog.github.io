@@ -99,7 +99,7 @@ function checkCookie() {
     let chat = getCookies("talkchat");
     let rede_social = getCookies("network");
     if (user != "") {
-      alert("Welcome again " + user + "\n" + email);
+      alert("Welcome again Usuário: " + user + "\n" + email);
     }
   }
 //Webservice
