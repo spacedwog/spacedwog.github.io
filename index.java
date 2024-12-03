@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class index1 {  
+public class index {  
   public static void main(String[] args) {  
     try {
       File myObj = new File("usuario.json");
