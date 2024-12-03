@@ -23,7 +23,7 @@ function social_media(social_media) {
             break;
 
         case 'linkedin':
-            src = 'https://www.linkedin.com/in/felipersantos1/';
+            src = 'https://www.linkedin.com/in/spacedwog/';
             break;
     }
     window.open(src);
