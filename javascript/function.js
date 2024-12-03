@@ -1,39 +1,14 @@
 //Cookies
     //Enviar para cookies
         //Nome Do Usuário
-function setCookieName(cname, cvalue){
+function setCookie(cname, cvalue){
     document.cookie = cname + "=" + cvalue + ";";
 }
-function setCookieEmail(cemail, cvalue){
-    document.cookie = cemail + "=" + cvalue + ";";
-}
-function setCookieProduct(cproduct, cvalue){
-    document.cookie = cproduct + "=" + cvalue + ";";
-}
-function setCookieProject(cproject, cvalue){    
-    document.cookie = cproject + "=" + cvalue + ";";
-}
-function setCookieChat(cchat, cvalue){
-    document.cookie = cchat + "=" + cvalue + ";";    
-}
-function setCookieNetwork(crede_social, cvalue){
-    document.cookie = crede_social + "=" + cvalue + ";";
-}
     //Receber de Cookie
-function getCookies(cname, cemail, cproduct, cproject, cchat, crede_social){
+function getCookie(cname){
     let name = cname + "=";
-    let email = cemail + "=";
-    let product = cproduct + "=";
-    let project = cproject + "=";
-    let chat = cchat + "=";
-    let rede_social = crede_social + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    let ce = decodedCookie.split(';');
-    let cp = decodedCookie.split(';');
-    let ct = decodedCookie.split(';');
-    let cc = decodedCookie.split(';');
-    let cr = decodedCookie.split(';');
     for(let i = 0; i < ca.length; i++) {
       let c = ca[i];
       while (c.charAt(0) == ' ') {
@@ -43,63 +18,13 @@ function getCookies(cname, cemail, cproduct, cproject, cchat, crede_social){
         return c.substring(name.length, c.length);
       }
     }
-    for(let i = 0; i < ce.length; i++) {
-      let c = ce[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(email) == 0) {
-        return c.substring(email.length, c.length);
-      }
-    }
-    for(let i = 0; i < cp.length; i++) {
-      let c = cp[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(product) == 0) {
-        return c.substring(product.length, c.length);
-      }
-    }
-    for(let i = 0; i < ct.length; i++) {
-      let c = ct[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(project) == 0) {
-        return c.substring(project.length, c.length);
-      }
-    }
-    for(let i = 0; i < cc.length; i++) {
-      let c = cc[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(chat) == 0) {
-        return c.substring(chat.length, c.length);
-      }
-    }
-    for(let i = 0; i < cr.length; i++) {
-      let c = cr[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(rede_social) == 0) {
-        return c.substring(rede_social.length, c.length);
-      }
-    }
     return "";
 }
 
 function checkCookie() {
     let user = getCookies("username");
-    let email = getCookies("useremail");
-    let product = getCookies("buyingproduct");
-    let project = getCookies("requestproject");
-    let chat = getCookies("talkchat");
-    let rede_social = getCookies("network");
     if (user != "") {
-      alert("Welcome again Usuário: " + user + "\n" + email);
+      alert("Welcome again User: " + user);
     }
   }
 //Webservice
