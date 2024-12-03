@@ -148,7 +148,7 @@ function send_email() {
         '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
     
     setUsuario(name, email);
-    setCookie("username", nome);
+    setCookie("username", name);
 
     if (email != "") {
         window.location.href = mailto;
