@@ -1,6 +1,17 @@
 class usuario{
-
+    constructor(nome, email, produto, projeto, chat, rede_social){
+        this.nome = nome;
+        this.email = email;
+        this.produto = produto;
+        this.projeto = projeto;
+        this.chat = chat;
+        this.rede_social = rede_social;
+    }
 }
+
+const novoUsuario = new usuario(getNome(), getEmail(), getProduto(),
+                                getProjeto(), getChat(), getRede_social());
+
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
         document.getElementById('menu').style.borderBottomRightRadius = '0';
@@ -29,6 +40,7 @@ function social_media(social_media) {
             src = 'https://www.linkedin.com/in/spacedwog/';
             break;
     }
+    localStorage.setItem("rede_social", src);
     window.open(src);
 }
 
@@ -43,6 +55,7 @@ function projeto(nome_projeto) {
             src = 'https://spacedwog.itch.io/criando-sua-raposa';
             break;
     }
+    localStorage.setItem("projeto", src);
     window.open(src);
 }
 
@@ -61,10 +74,12 @@ function efetuar_compra(compra) {
             src = 'https://loja.infinitepay.io/spacedwog/uty6194-plano-de-desenvolvimento-de-aplicativos-we';
             break;
     }
+    localStorage.setItem("produto", src);
     window.open(src);
 }
 
 function chat_painel() {
+    localStorage.setItem("chat", "https://wa.me/5511991719629");
     window.open("https://wa.me/5511991719629");
 }
 
@@ -92,8 +107,7 @@ function send_email() {
     if (email != "") {
         window.location.href = mailto;
     }
-    localStorage.setItem("nome_usuario", name);
-    localStorage.setItem("email_usuario", email);
+    setUsuario(name, email);
 }
 
 // Close the sidebar with the close button
@@ -114,4 +128,33 @@ function getLocation() {
 function showPosition(position) {
     var latitude = localStorage.setItem("latitude", position.coords.latitude);
     var longitude = localStorage.setItem("longitude", position.coords.longitude);
+}
+
+function setUsuario(nome, email){
+    localStorage.setItem("nome_usuario", nome);
+    localStorage.setItem("email_usuario", email);
+}
+
+function getNome(){
+    localStorage.getItem("nome_usuario");
+}
+
+function getEmail(){
+    localStorage.getItem("email_usuario");
+}
+
+function getProduto(){
+    localStorage.getItem("produto");
+}
+
+function getProjeto(){
+    localStorage.getItem("projeto");
+}
+
+function getChat(){
+    localStorage.getItem("chat");
+}
+
+function getRede_social(){
+    localStorage.getItem("rede_social");
 }
