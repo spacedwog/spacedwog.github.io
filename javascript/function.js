@@ -148,6 +148,7 @@ function send_email() {
         '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
     
     setUsuario(name, email);
+    setCookie("username", nome);
 
     if (email != "") {
         window.location.href = mailto;
@@ -159,7 +160,6 @@ function send_email() {
 function setUsuario(nome, email){
     localStorage.setItem("nome_usuario", nome);
     localStorage.setItem("email_usuario", email);
-    setCookie("username", nome);
 }
     //GET
 function getNome(){
