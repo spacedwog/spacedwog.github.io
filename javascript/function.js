@@ -12,6 +12,17 @@ class usuario{
 const novoUsuario = new usuario(getNome(), getEmail(), getProduto(),
                                 getProjeto(), getChat(), getRede_social());
 
+//Cookies
+    //Enviar para Cookies
+function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//Webservice
+    //Atualizar Menu                                
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
         document.getElementById('menu').style.borderBottomRightRadius = '0';
@@ -20,7 +31,25 @@ function updatemenu() {
         document.getElementById('menu').style.borderRadius = '10px';
     }
 }
+    //Abrir Menu
+function w3_open() {
+    var mySidebar = document.getElementById("mySidebar");
 
+    if (mySidebar.style.display == 'block') {
+        mySidebar.style.display = 'none';
+    }
+    else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+    //Fechar Menu
+function w3_close() {
+    var mySidebar = document.getElementById("mySidebar");
+    mySidebar.style.display = "none";
+}
+
+    //URL's de Redes Sociais
 function social_media(social_media) {
     let src;
     switch (social_media) {
@@ -44,6 +73,7 @@ function social_media(social_media) {
     window.open(src);
 }
 
+//Projetos Concluídos
 function projeto(nome_projeto) {
     let src;
     switch (nome_projeto) {
@@ -59,6 +89,7 @@ function projeto(nome_projeto) {
     window.open(src);
 }
 
+//Compra de Produtos
 function efetuar_compra(compra) {
     let src;
     switch (compra) {
@@ -78,45 +109,15 @@ function efetuar_compra(compra) {
     window.open(src);
 }
 
+//Painel para Chat
 function chat_painel() {
     localStorage.setItem("chat", "https://wa.me/5511991719629");
     window.open("https://wa.me/5511991719629");
 }
 
-function w3_open() {
-
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
-
-    if (mySidebar.style.display == 'block') {
-        mySidebar.style.display = 'none';
-    } else {
-        mySidebar.style.display = 'block';
-    }
-}
-
-function send_email() {
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let subject = document.getElementById('subject').value;
-    let message = document.getElementById('message').value;
-
-    let mailto = 'mailto:owner@spacedwog.com.br?subject=' + subject +
-        '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
-
-    if (email != "") {
-        window.location.href = mailto;
-    }
-    setUsuario(name, email);
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
-    mySidebar.style.display = "none";
-}
-
+//API
+    //GPS
+        //Pegar localização
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(showPosition);
@@ -124,17 +125,35 @@ function getLocation() {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
-
+        //Exibir localização
 function showPosition(position) {
     var latitude = localStorage.setItem("latitude", position.coords.latitude);
     var longitude = localStorage.setItem("longitude", position.coords.longitude);
 }
+    //Enviar Informações
+        //Enviar Email
+function send_email() {
+let name = document.getElementById('name').value;
+let email = document.getElementById('email').value;
+let subject = document.getElementById('subject').value;
+let message = document.getElementById('message').value;
 
+let mailto = 'mailto:owner@spacedwog.com.br?subject=' + subject +
+    '&body=Nome: ' + name + '\nEmail: ' + email + '\nSolicitou o projeto: ' + message;
+
+if (email != "") {
+    window.location.href = mailto;
+}
+setUsuario(name, email);
+}
+
+//Encapsulamento
+    //SET
 function setUsuario(nome, email){
     localStorage.setItem("nome_usuario", nome);
     localStorage.setItem("email_usuario", email);
 }
-
+    //GET
 function getNome(){
     localStorage.getItem("nome_usuario");
 }
