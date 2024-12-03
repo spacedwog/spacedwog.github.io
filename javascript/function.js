@@ -1,3 +1,6 @@
+class usuario{
+
+}
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
         document.getElementById('menu').style.borderBottomRightRadius = '0';
@@ -89,6 +92,8 @@ function send_email() {
     if (email != "") {
         window.location.href = mailto;
     }
+    localStorage.setItem("nome_usuario", name);
+    localStorage.setItem("email_usuario", email);
 }
 
 // Close the sidebar with the close button
