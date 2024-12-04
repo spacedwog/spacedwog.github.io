@@ -6,18 +6,17 @@ public class renderizar_foto {
   public static void main(String[] args) {
     try {
       File myObj = new File("imagem/Spacedwog.png");
-      Scanner myReader = new Scanner(myObj);
       if (myObj.createNewFile()) {
         System.out.println("File created: " + myObj.getName());
       }
       else {
         System.out.println("File already exists.");
-        while (myReader.hasNextLine()) {
-          System.out.println("Reading File");
-          String data = myReader.nextLine();
-          System.out.println(data);
-        }
-        myReader.close();
+          try (Scanner myReader = new Scanner(myObj)) {
+              while (myReader.hasNextLine()) {
+                  System.out.println("Reading File");
+                  String data = myReader.nextLine();
+                  System.out.println(data);
+              } }
 
       }
     } catch (IOException e) {
