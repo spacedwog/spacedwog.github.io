@@ -13,6 +13,7 @@ public class renderizar_foto {
       else {
         System.out.println("File already exists.");
         while (myReader.hasNextLine()) {
+          System.out.println("Reading File");
           String data = myReader.nextLine();
           System.out.println(data);
         }
