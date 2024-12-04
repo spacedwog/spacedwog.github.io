@@ -9,16 +9,22 @@ public class renderizar_foto {
       if (myObj.createNewFile()) {
         System.out.println("File created: " + myObj.getName());
       }
-      else {
+      else
+      {
         System.out.println("File already exists.");
-          try (Scanner myReader = new Scanner(myObj)) {
-            System.out.println("Scan the file.");
-              while (myReader.hasNextLine()) {
-                  System.out.println("Reading File");
-                  String data = myReader.nextLine();
-                  System.out.println(data);
-              } }
-
+        try (Scanner myReader = new Scanner(myObj)) {
+          System.out.println("Scan the file.");
+          while (myReader.hasNextLine()) {
+            System.out.println("Reading File");
+            String data = myReader.nextLine();
+            System.out.println(data);
+            if (myReader.hasNextByte()) {
+              System.out.println(myReader.nextByte());
+            } else {
+              myReader.next();
+            }
+          }
+        }
       }
     } catch (IOException e) {
       System.out.println("An error occurred: " + e.toString());
