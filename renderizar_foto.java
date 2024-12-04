@@ -14,16 +14,16 @@ public class renderizar_foto {
         System.out.println("File already exists.");
         try (Scanner myReader = new Scanner(myObj)) {
           System.out.println("Scan the file.");
-          while (myReader.hasNextLine()) {
-            System.out.println("Reading File");
-            String data = myReader.nextLine();
-            System.out.println("Data: " + data);
-            if (myReader.hasNextByte()) {
-              System.out.println(myReader.nextByte());
-            } else {
-              myReader.next();
-            }
+          if (myReader.hasNextByte()) {
+            System.out.println(myReader.nextByte());
+          } else {
+            myReader.next();
           }
+          //while (myReader.hasNextLine()) {
+          //  System.out.println("Reading File");
+          //  String data = myReader.nextLine();
+          //  System.out.println("Data: " + data);
+          //}
         }
       }
     } catch (IOException e) {
