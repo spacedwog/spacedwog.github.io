@@ -16,7 +16,7 @@ public class renderizar_foto {
         try (Scanner myReader = new Scanner(myObj)) {
           System.out.println("Scan the file.");
           byte codigo_bitcodal = myReader.nextByte();
-          System.err.println("" + codigo_bitcodal);
+          System.err.println("Código Bitcodal" + codigo_bitcodal);
           //if (myReader.hasNextByte()) {
           //  System.out.println(myReader.nextByte());
           //} else {
