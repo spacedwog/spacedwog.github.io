@@ -17,11 +17,11 @@ public class renderizar_foto {
           System.out.println("Scan the file.");
           byte codigo_bitcodal = myReader.nextByte();
           System.err.println("" + codigo_bitcodal);
-          if (myReader.hasNextByte()) {
-            System.out.println(myReader.nextByte());
-          } else {
-            myReader.next();
-          }
+          //if (myReader.hasNextByte()) {
+          //  System.out.println(myReader.nextByte());
+          //} else {
+          //  myReader.next();
+          //}
           //while (myReader.hasNextLine()) {
           //  System.out.println("Reading File");
           //  String data = myReader.nextLine();
