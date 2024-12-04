@@ -17,7 +17,7 @@ public class renderizar_foto {
           while (myReader.hasNextLine()) {
             System.out.println("Reading File");
             String data = myReader.nextLine();
-            System.out.println(data);
+            System.out.println("Data: " + data);
             if (myReader.hasNextByte()) {
               System.out.println(myReader.nextByte());
             } else {
