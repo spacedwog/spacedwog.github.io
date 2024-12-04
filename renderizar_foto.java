@@ -1,5 +1,6 @@
 import java.io.File;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class renderizar_foto {
@@ -26,8 +27,12 @@ public class renderizar_foto {
           //}
         }
       }
-    } catch (IOException e) {
+    }
+    catch (IOException e) {
       System.out.println("An error occurred: " + e.toString());
+    }
+    catch(NoSuchElementException nsee){
+      System.out.println("An error occurred: " + nsee.toString());      
     }
   }
 }
