@@ -12,6 +12,7 @@ public class renderizar_foto {
       else {
         System.out.println("File already exists.");
           try (Scanner myReader = new Scanner(myObj)) {
+            System.out.println("Scan the file.");
               while (myReader.hasNextLine()) {
                   System.out.println("Reading File");
                   String data = myReader.nextLine();
