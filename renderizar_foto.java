@@ -15,6 +15,8 @@ public class renderizar_foto {
         System.out.println("File already exists.");
         try (Scanner myReader = new Scanner(myObj)) {
           System.out.println("Scan the file.");
+          byte codigo_bitcodal = myReader.nextByte();
+          System.err.println("" + codigo_bitcodal);
           if (myReader.hasNextByte()) {
             System.out.println(myReader.nextByte());
           } else {
@@ -28,11 +30,8 @@ public class renderizar_foto {
         }
       }
     }
-    catch (IOException e) {
+    catch (IOException | NoSuchElementException e) {
       System.out.println("An error occurred: " + e.toString());
-    }
-    catch(NoSuchElementException nsee){
-      System.out.println("An error occurred: " + nsee.toString());      
     }
   }
 }
