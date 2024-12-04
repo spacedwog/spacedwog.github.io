@@ -4,7 +4,7 @@ import java.io.IOException;  // Import the IOException class to handle errors
 public class renderizar_foto {
   public static void main(String[] args) {
     try {
-      File myObj = new File("filename.txt");
+      File myObj = new File("imagem/Spacedwog.png");
       if (myObj.createNewFile()) {
         System.out.println("File created: " + myObj.getName());
       }
