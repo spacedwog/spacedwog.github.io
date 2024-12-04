@@ -84,5 +84,41 @@
         "usuario",
         "Usuário",
         "Webservice"
+    ],
+    "netbeans.jdkhome": "/usr/local/sdkman/candidates/java/21.0.4-ms",
+    "netbeans.project.jdkhome": "/usr/local/sdkman/candidates/java/21.0.4-ms",
+    "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/21.0.4-ms",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-1.8",
+            "path": "/home/codespace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/8"
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "/opt/java/11.0.14"
+        },
+        {
+            "name": "JavaSE-17",
+            "path": "/usr/local/sdkman/candidates/java/17.0.12-ms"
+        },
+        {
+            "name": "JavaSE-21",
+            "path": "/usr/local/sdkman/candidates/java/21.0.4-ms"
+        },
+        {
+            "name": "JavaSE-23",
+            "path": "/home/codespace/.vscode-remote/data/User/globalStorage/pleiades.java-extension-pack-jdk/java/latest",
+            "default": true
+        }
+    ],
+    "terminal.integrated.env.linux": {
+        "JAVA_HOME": "/usr/local/sdkman/candidates/java/21.0.4-ms",
+        "PATH": "/usr/local/sdkman/candidates/java/21.0.4-ms/bin:${env:PATH}"
+    },
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "/usr/local/sdkman/candidates/java/21.0.4-ms"
+        }
     ]
 }
