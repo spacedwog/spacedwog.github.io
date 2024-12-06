@@ -12,5 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     acceptButton.addEventListener("click", function () {
     localStorage.setItem("cookiesAccepted", "true");
     cookieBar.style.display = "none";
+    console.log("Cookie aceito");
+    checkCookie();
+    console.log("Cookie checado");
     });
 });
