@@ -10,13 +10,13 @@ function getCookie(cname){
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
     for(let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
     return "";
 }
@@ -24,11 +24,11 @@ function getCookie(cname){
 function checkCookie() {
     let user = getCookies("username");
     if (user != "") {
-      alert("Welcome again User: " + user);
+        alert("Welcome again User: " + user);
     }
-  }
+}
 //Webservice
-    //Atualizar Menu                                
+    //Atualizar Menu
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
         document.getElementById('menu').style.borderBottomRightRadius = '0';
