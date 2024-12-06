@@ -3,12 +3,19 @@
     // Focalizar para exibir as descrições dos atributos existentes.
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [        
         {
-            "type": "java",
-            "name": "Current File",
+            "name": "Debugger for Mainframe: INTERTEST™ FOR CICS",
+            "type": "intertest-cics",
             "request": "launch",
-            "mainClass": "${file}"
+            "programName": [
+                "PROGRAMNM"
+            ],
+            "host": "host_name",
+            "port": 0,
+            "interTestUserName": "USERNAME",
+            "interTestSecure": true,
+            "cicsApplId": "cicsId"
         }
     ]
 }

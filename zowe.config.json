@@ -1,0 +1,93 @@
+{
+    "$schema": "./zowe.schema.json",
+    "profiles": {
+        "zosmf": {
+            "type": "zosmf",
+            "properties": {
+                "port": 443
+            }
+        },
+        "tso": {
+            "type": "tso",
+            "properties": {
+                "account": "",
+                "codePage": "1047",
+                "logonProcedure": "IZUFPROC"
+            }
+        },
+        "ssh": {
+            "type": "ssh",
+            "properties": {
+                "port": 22
+            }
+        },
+        "cics": {
+            "type": "cics",
+            "properties": {}
+        },
+        "zftp": {
+            "type": "zftp",
+            "properties": {
+                "port": 21,
+                "secureFtp": true
+            }
+        },
+        "rse": {
+            "type": "rse",
+            "properties": {
+                "port": 6800,
+                "basePath": "rseapi",
+                "protocol": "https"
+            }
+        },
+        "endevor": {
+            "type": "endevor",
+            "properties": {
+                "port": 0,
+                "protocol": "https"
+            }
+        },
+        "endevor-location": {
+            "type": "endevor-location",
+            "properties": {
+                "instance": "ENDEVOR",
+                "environment": "DEV",
+                "system": "",
+                "subsystem": "",
+                "type": "",
+                "stageNumber": "",
+                "maxrc": 8
+            }
+        },
+        "zOpenDebug": {
+            "type": "zOpenDebug",
+            "properties": {
+                "dpsPort": 8143,
+                "dpsContextRoot": "api/v1",
+                "dpsSecured": true,
+                "authenticationType": "token",
+                "uuid": "8a9036bb-e68e-4793-85ff-4a12c983d897"
+            }
+        },
+        "project_base": {
+            "type": "base",
+            "properties": {
+                "host": "",
+                "rejectUnauthorized": true
+            }
+        }
+    },
+    "defaults": {
+        "zosmf": "zosmf",
+        "tso": "tso",
+        "ssh": "ssh",
+        "cics": "cics",
+        "zftp": "zftp",
+        "rse": "rse",
+        "endevor": "endevor",
+        "endevor-location": "endevor-location",
+        "zOpenDebug": "zOpenDebug",
+        "base": "project_base"
+    },
+    "autoStore": false
+}
