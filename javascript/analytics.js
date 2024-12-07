@@ -36,6 +36,7 @@ function trackEvent(eventType, details = {}) {
 
   // Registrar uma visita
 function trackVisit() {
+
     let visits = parseInt(getCookie("visits") || "0", 10);
     visits++;
     setCookie("visits", visits, 365); // Expira em 1 ano
@@ -44,21 +45,9 @@ function trackVisit() {
     // Registrar no analytics
     trackEvent("page_view", { url: window.location.href });
 
-// Conteúdo do arquivo
-const content = "Este é um arquivo criado com Node.js!";
-
-// Criando o arquivo
-fs.writeFile("meuarquivo.txt", content, (err) => {
-    if (err) {
-        console.error("Erro ao criar o arquivo:", err);
-        return;
-    }
-    console.log("Arquivo criado com sucesso!");
-});
-
 }
 
-  // Registrar tempo de permanência
+// Registrar tempo de permanência
 let sessionStart = Date.now();
 window.addEventListener("beforeunload", () => {
     const duration = Math.floor((Date.now() - sessionStart) / 1000); // Duração em segundos
