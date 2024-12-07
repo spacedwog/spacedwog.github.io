@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 // Função para salvar cookies
 function setCookie(name, value, days) {
     const date = new Date();
@@ -41,8 +43,6 @@ function trackVisit() {
 
     // Registrar no analytics
     trackEvent("page_view", { url: window.location.href });
-
-    const fs = require("fs");
 
 // Conteúdo do arquivo
 const content = "Este é um arquivo criado com Node.js!";
