@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Checa se o cookie já foi aceito
     if (localStorage.getItem("cookiesAccepted")) {
-        cookieBar.style.display = "display";
+        cookieBar.style.display = "none";
     }
     // Ação ao clicar no botão de aceitar
     acceptButton.addEventListener("click", function () {
