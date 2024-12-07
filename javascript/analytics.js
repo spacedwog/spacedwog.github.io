@@ -13,6 +13,11 @@ function getCookie(name) {
         if (cookie.startsWith(`${name}=`)) {
             return cookie.substring(name.length + 1);
         }
+        else{
+            if(cookie.startsWith(_hjSessionUser_)){
+                alert("teste");
+            }
+        }
     }
     return null;
 }
@@ -41,6 +46,23 @@ function trackVisit() {
 
     // Registrar no analytics
     trackEvent("page_view", { url: window.location.href });
+    const fs = require("fs");
+
+// Dados em JSON
+const data = {
+    nome: "João",
+    idade: 25,
+    profissão: "Desenvolvedor",
+};
+
+// Salvando como arquivo JSON
+fs.writeFile("dados.json", JSON.stringify(data, null, 2), (err) => {
+    if (err) {
+        console.error("Erro ao criar o arquivo:", err);
+        return;
+    }
+    console.log("Arquivo JSON criado com sucesso!");
+});
 }
 
   // Registrar tempo de permanência
