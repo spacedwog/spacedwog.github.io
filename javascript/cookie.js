@@ -31,7 +31,6 @@ function getCookie(name) {
     return null; // Retorna null se o cookie não for encontrado
 }
 
-        
 function checkCookie() {
     let user = getCookies("username");
     if (user != "") {
