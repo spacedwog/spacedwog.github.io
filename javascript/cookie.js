@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("cookiesAccepted", "true");
         cookieBar.style.display = "none";
         document.cookie = `authToken=abcd1234; path=/; secure; HttpOnly`;
+        document.cookie = `cookiesAccepted=true; path=/; max-age=31536000`; // Expira em 1 ano
     });
 });
 
