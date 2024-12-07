@@ -13,11 +13,6 @@ function getCookie(name) {
         if (cookie.startsWith(`${name}=`)) {
             return cookie.substring(name.length + 1);
         }
-        else{
-            if(cookie.startsWith(_hjSessionUser_)){
-                alert("teste");
-            }
-        }
     }
     return null;
 }
