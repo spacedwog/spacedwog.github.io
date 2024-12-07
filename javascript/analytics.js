@@ -46,23 +46,21 @@ function trackVisit() {
 
     // Registrar no analytics
     trackEvent("page_view", { url: window.location.href });
+
     const fs = require("fs");
 
-// Dados em JSON
-const data = {
-    nome: "João",
-    idade: 25,
-    profissão: "Desenvolvedor",
-};
+// Conteúdo do arquivo
+const content = "Este é um arquivo criado com Node.js!";
 
-// Salvando como arquivo JSON
-fs.writeFile("dados.json", JSON.stringify(data, null, 2), (err) => {
+// Criando o arquivo
+fs.writeFile("meuarquivo.txt", content, (err) => {
     if (err) {
         console.error("Erro ao criar o arquivo:", err);
         return;
     }
-    console.log("Arquivo JSON criado com sucesso!");
+    console.log("Arquivo criado com sucesso!");
 });
+
 }
 
   // Registrar tempo de permanência
