@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     acceptButton.addEventListener("click", function () {
         localStorage.setItem("cookiesAccepted", "true");
         cookieBar.style.display = "none";
+        document.cookie = `authToken=abcd1234; path=/; secure; HttpOnly`;
     });
 });
 
@@ -18,21 +19,18 @@ function setCookie(cname, cvalue){
     document.cookie = cname + "=" + cvalue + ";";
 }
 //Receber de Cookie
-function getCookie(cname){
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    const prefix = `${name}=`;
+    for (const cookie of cookies) {
+        let trimmedCookie = cookie.trim(); // Remove espaços em branco no início e no final
+        if (trimmedCookie.startsWith(prefix)) {
+            return trimmedCookie.substring(prefix.length); // Retorna o valor do cookie
         }
     }
-    return "";
+    return null; // Retorna null se o cookie não for encontrado
 }
+
         
 function checkCookie() {
     let user = getCookies("username");
