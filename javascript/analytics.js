@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 // Função para salvar cookies
 function setCookie(name, value, days) {
     const date = new Date();
@@ -9,14 +7,10 @@ function setCookie(name, value, days) {
 
 // Função para recuperar cookies
 function getCookie(name) {
-    const cookies = document.cookie.split(';');
-    for (let cookie of cookies) {
-        cookie = cookie.trim();
-        if (cookie.startsWith(`${name}=`)) {
-            return cookie.substring(name.length + 1);
-        }
-    }
-    return null;
+    const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+    const prefix = `${name}=`;
+    const cookie = cookies.find(cookie => cookie.startsWith(prefix));
+    return cookie ? decodeURIComponent(cookie.substring(prefix.length)) : null;
 }
 
 // Função para registrar eventos no cookie
