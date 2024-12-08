@@ -8,7 +8,7 @@ const apiURL = `https://api.github.com/repos/${repoOwner}/${repoName}/issues`;
 // Substituir "SEU_TOKEN_AQUI" pelo token de autenticação do GitHub
 // Configurações para a API
 const headers = {
-    Authorization: `token SEU_TOKEN_AQUI`
+    Authorization: `token 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`
 };
 
 // Função para buscar e exibir as Issues
