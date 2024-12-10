@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cookieBar.style.display = "none";
     }
     // Ação ao clicar no botão de aceitar
-    acceptButton.addEventListener("click", function () {
+    acceptButton.addEventListener("accept-cookies", function () {
         localStorage.setItem("cookiesAccepted", "true");
         cookieBar.style.display = "none";
         document.cookie = `authToken=abcd1234; path=/; secure; HttpOnly`;
