@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const acceptButton = document.getElementById("accept-cookies");
 
     // Checa se o cookie já foi aceito
-    if (localStorage.getItem("cookiesAccepted")) {
+    if (!localStorage.getItem("cookiesAccepted")) {
         cookieBar.style.display = "none";
     }
     // Ação ao clicar no botão de aceitar
