@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!localStorage.getItem("cookiesAccepted")) {
         cookieBar.style.display = "none";
     }
+
+    console.log(document.getElementById("accept-cookies"));
+
     // Ação ao clicar no botão de aceitar
     document.getElementById("accept-cookies").addEventListener("click", function () {
         localStorage.setItem("cookiesAccepted", "true");
