@@ -1,7 +1,6 @@
 // script.js
 document.addEventListener("DOMContentLoaded", function () {
     const cookieBar = document.getElementById("cookie-bar");
-    const acceptButton = document.getElementById("accept-cookies");
 
     // Checa se o cookie já foi aceito
     if (!localStorage.getItem("cookiesAccepted")) {
