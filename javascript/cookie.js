@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(document.getElementById("accept-cookies"));
 
     // Ação ao clicar no botão de aceitar
-    document.getElementById("accept-cookies").addEventListener("click", function () {
+    document.getElementById("accept-cookies").addEventListener("click", () => {
         localStorage.setItem("cookiesAccepted", "true");
         cookieBar.style.display = "none";
         document.cookie = `authToken=abcd1234; path=/; secure; HttpOnly`;
