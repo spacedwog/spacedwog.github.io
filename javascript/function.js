@@ -52,6 +52,7 @@ function social_media(social_media) {
     }
     localStorage.setItem("rede_social", src);
     window.open(src);
+    setCookie("rede_social", social_media);
 }
 
 //Projetos Concluídos
@@ -68,6 +69,7 @@ function projeto(nome_projeto) {
     }
     localStorage.setItem("projeto", nome_projeto);
     window.open(src);
+    setCookie("projeto", nome_projeto);
 }
 
 //Compra de Produtos
@@ -88,12 +90,14 @@ function efetuar_compra(compra) {
     }
     localStorage.setItem("produto", src);
     window.open(src);
+    setCookie("tipo_produto", compra);
 }
 
 //Painel para Chat
 function chat_painel() {
     localStorage.setItem("chat", "https://wa.me/5511991719629");
     window.open("https://wa.me/5511991719629");
+    setCookie("chat", "whatsapp");
 }
 
 //API
