@@ -10,7 +10,7 @@ function updatemenu() {
 }
     //Abrir Menu
 function w3_open() {
-    var mySidebar = document.getElementById("mySidebar");
+    const mySidebar = document.getElementById("mySidebar");
 
     if (mySidebar.style.display == 'block') {
         mySidebar.style.display = 'none';
@@ -22,7 +22,7 @@ function w3_open() {
 
     //Fechar Menu
 function w3_close() {
-    var mySidebar = document.getElementById("mySidebar");
+    const mySidebar = document.getElementById("mySidebar");
     mySidebar.style.display = "none";
 }
 
