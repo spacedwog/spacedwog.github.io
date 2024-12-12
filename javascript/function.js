@@ -97,7 +97,7 @@ function efetuar_compra(compra) {
 function chat_painel() {
     localStorage.setItem("chat", "https://wa.me/5511991719629");
     window.open("https://wa.me/5511991719629");
-    setCookie("chat", "whatsapp");
+    setCookie("chat", getChat());
 }
 
 //API
@@ -114,6 +114,7 @@ function send_email() {
     
     setUsuario(name, email);
     setCookie("username", name);
+    setCookie("useremail", email);
 
     if (email != "") {
         window.location.href = mailto;
