@@ -1,15 +1,11 @@
 function createIA() {
 
-    const email = getCookie("usermemail");
-    const tipo_anuncio = getCookie("tipo_produto");
-    const social_media = getCookie("rede_social");
-    const projetos = getCookie("projeto");
-    const contato = getCookie("chat");
+    const site = "https://github.spacedwog.com.br";
+    const projeto = "https://donnaparis.spacedwog.com.br";
 
-    const corpo_email = "Confira nossos projetos: " + projetos + "\nSiga-nos em nossas redes sociais: " + social_media
-                        "Para entrar em contato acesse: " + contato + "\n@Spacedwog agradece a preferência";
+    const corpo_email = "Acesse nosso site: " + site + "\n Confira nossos projetos: " + projeto;
 
-    let mailto = 'mailto:owner@spacedwog.com.br?subject=' + tipo_anuncio +
+    let mailto = 'mailto:owner@spacedwog.com.br?subject=Spacedwog na Nuvem' +
         '&body= ' + corpo_email;
 
     if (email != "") {
