@@ -1,12 +1,16 @@
 //Webservice
     //Atualizar Menu
 function updatemenu() {
-    if (document.getElementById('responsive-menu').checked == true) {
-        document.getElementById('menu').style.borderBottomRightRadius = '0';
-        document.getElementById('menu').style.borderBottomLeftRadius = '0';
+    const menuCheckbox = document.getElementById('responsive-menu');
+    const menu = document.getElementById('menu');
+
+    if (menuCheckbox.checked) {
+        menu.style.borderBottomRightRadius = '0';
+        menu.style.borderBottomLeftRadius = '0';
     } else {
-        document.getElementById('menu').style.borderRadius = '10px';
+        menu.style.borderRadius = '10px';
     }
+
 }
     //Abrir Menu
 function w3_open() {
