@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("p").click(function(){
-      $(this).hide();
+    $("a").click(function(){
+        alert("Link clicado!" + $(this).attr("href"));
+      //$(this).hide();
     });
   });
