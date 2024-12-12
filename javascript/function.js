@@ -93,20 +93,6 @@ function chat_painel() {
 }
 
 //API
-    //GPS
-        //Pegar localização
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-        //Exibir localização
-function showPosition(position) {
-    var latitude = localStorage.setItem("latitude", position.coords.latitude);
-    var longitude = localStorage.setItem("longitude", position.coords.longitude);
-}
     //Enviar Informações
         //Enviar Email
 function send_email() {
