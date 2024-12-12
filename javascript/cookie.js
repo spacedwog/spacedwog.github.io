@@ -1,9 +1,9 @@
-// script.js
+// cookie.js
 document.addEventListener("DOMContentLoaded", function () {
     const cookieBar = document.getElementById("cookie-bar");
 
     // Checa se o cookie já foi aceito
-    if (!localStorage.getItem("cookiesAccepted")) {
+    if (localStorage.getItem("cookiesAccepted")) {
         cookieBar.style.display = "none";
     }
 
